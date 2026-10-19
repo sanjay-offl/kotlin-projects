@@ -4,12 +4,13 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    namespace "com.hfad.bitsandpizzas"
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.hfad.bitsandpizzas"
         minSdk 21
-        targetSdk 32
+        targetSdk 35
         versionCode 1
         versionName "1.0"
 
