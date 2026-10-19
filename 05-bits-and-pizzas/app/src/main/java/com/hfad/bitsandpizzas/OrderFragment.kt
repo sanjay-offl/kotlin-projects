@@ -5,20 +5,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import com.hfad.bitsandpizzas.databinding.FragmentOrderBinding
 
 class OrderFragment : Fragment() {
     private var _binding: FragmentOrderBinding? = null
-    private val binding get() = requireNotNull(_binding)
+    private val binding: FragmentOrderBinding
+        get() = requireNotNull(_binding)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentOrderBinding.inflate(inflater, container, false)
-        (requireActivity() as androidx.appcompat.app.AppCompatActivity).setSupportActionBar(binding.toolbar)
+        (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
 
         binding.fab.setOnClickListener {
             val pizzaType = binding.pizzaGroup.checkedRadioButtonId
